@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bike Toggle Info</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f8ff;
+      padding: 30px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .bike-card {
+      display: none;
+      margin-top: 20px;
+      border: 2px solid #4CAF50;
+      padding: 15px;
+      border-radius: 12px;
+      background-color: #e8f5e9;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 500px;
+    }
+
+    .bike {
+      margin-bottom: 20px;
+    }
+
+    .bike img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px 10px 0 0;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-hunter { background-color: #007bff; }
+    .btn-hunter:hover { background-color: #0056b3; }
+
+    .btn-tiger { background-color: #ff5722; }
+    .btn-tiger:hover { background-color: #e64a19; }
+
+    .btn-ktm { background-color: #ff9800; }
+    .btn-ktm:hover { background-color: #fb8c00; }
+  </style>
+</head>
+<body>
+
+  <h2>Toggle Bike Info</h2>
+  <button class="btn-hunter" onclick="toggleBike('hunter')">Royal Enfield Hunter</button>
+  <button class="btn-tiger" onclick="toggleBike('tiger')">Triumph Tiger</button>
+  <button class="btn-ktm" onclick="toggleBike('ktm')">KTM 390</button>
+
+  <div id="hunter" class="bike-card">
+    <div class="bike">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Royal_Enfield_Hunter_350.jpg" alt="Royal Enfield Hunter">
+      <strong>Royal Enfield Hunter:</strong> A stylish retro motorcycle with modern performance and a 349cc engine.
+    </div>
+  </div>
+
+  <div id="tiger" class="bike-card">
+    <div class="bike">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Triumph_Tiger_900_GT_Pro.jpg" alt="Triumph Tiger">
+      <strong>Triumph Tiger:</strong> A powerful adventure touring bike with excellent off-road capability and multiple engine options.
+    </div>
+  </div>
+
+  <div id="ktm" class="bike-card">
+    <div class="bike">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/KTM_RC_390_2021.jpg" alt="KTM 390">
+      <strong>KTM 390:</strong> A sporty, lightweight performance bike with a 373cc engine, perfect for city and track rides.
+    </div>
+  </div>
+
+  <script>
+    function toggleBike(id) {
+      const card = document.getElementById(id);
+      card.style.display = (card.style.display === "none" || card.style.display === "") ? "block" : "none";
+    }
+  </script>
+
+</body>
+</html>
